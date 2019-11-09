@@ -1,0 +1,18 @@
+package conta;
+
+public class Conta {
+	public double Saldo;
+	public String Titular;
+	public int Numero;
+	public String Agencia;
+	
+	public void depositar(double valor)
+	{
+		this.Saldo += valor;
+	}
+	
+	public void sacar(double valor)
+	{
+		this.Saldo -= valor;
+	}
+}

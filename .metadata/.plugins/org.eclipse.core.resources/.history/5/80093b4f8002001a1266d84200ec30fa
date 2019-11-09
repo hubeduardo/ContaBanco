@@ -1,0 +1,7 @@
+package br.com.fiap.contas.modelo;
+
+public class SeguroDeVida {
+	private double valor;
+	 private String titular;
+	 private int numeroApolice;
+}

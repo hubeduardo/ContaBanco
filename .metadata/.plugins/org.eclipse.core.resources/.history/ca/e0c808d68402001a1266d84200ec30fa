@@ -1,0 +1,56 @@
+package br.com.fiap.contas.modelo;
+
+import br.com.fiap.contas.main.Conta;
+
+public class TesteConta {
+	public static void main(String[] args) {
+		
+		ContaCorrente c1 = new ContaCorrente();
+		c1.Agencia = "10";
+		c1.Numero = 10;
+		c1.Titular = "Ze";
+		
+		c1.depositar(10);
+		
+		c1.sacar(20);
+		
+		System.out.println(c1.getTipo());
+		
+		ContaPoupanca c2 = new ContaPoupanca();
+		c2.Agencia = "10";
+		c2.Numero = 10;
+		c2.Titular = "Orlando";
+		
+		c2.depositar(10);
+		
+		c2.sacar(20);
+		
+		System.out.println(c2.getTipo());
+		
+		SeguroDeVida seg = new SeguroDeVida();
+		seg.setTitular("Mario");
+		seg.setNumeroApolice(9);
+		
+		System.out.println("Nome: " + seg.getTitular() +  " numero do seguro: " + seg.getNumeroApolice());
+		
+		
+
+		ContaCorrente c4 = new ContaCorrente();
+		c4.Agencia = "111";
+		c4.Numero = 222;
+		c4.Titular = "joao";
+		
+		c4.depositar(-1);
+		try {
+			c4.sacar(20);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		System.out.println(c4.getTipo());
+		
+		
+		
+	}
+}
